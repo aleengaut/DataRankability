@@ -15,7 +15,7 @@ from numpy.linalg import norm
 class datarankable:
     
     def __init__(self, df1):
-        self.data = df1.to_numpy()    # instance variable unique to each instance
+        self.data = df1.to_numpy()   
         self.data = np.matrix(self.data).transpose()
         self.xrown = self.data.shape[1]
         self.yrown = self.data.shape[0]
