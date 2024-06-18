@@ -4,7 +4,7 @@
 """
 Created on Mon Mar 27 16:10:41 2023
 
-@author: scalexandre
+@author: Alexandre José Ferreira
 """
 
 
