@@ -14,16 +14,11 @@ the example data.csv
 """
 
 import pandas as pd
-from rankability import datarankable
+from rankability import DataRankable
 
 file=open('data.csv','r')
 data1 = pd.read_csv(file)
 
-for columnname in data1.keys():
-    try:
-        data1[columnname].astype(float)
-    except TypeError:
-        print('could not convert string to float!')
-
-dr1=datarankable(data1)
-print('Rankability index:', dr1.rankabilityIndex())
+dr1=DataRankable(data1)
+dr1.__rankabilityIndex__()
+print('Rankability index:', dr1.rankabilityIndex)
