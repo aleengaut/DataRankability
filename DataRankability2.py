@@ -6,10 +6,10 @@ Created on Fri Jun 14 09:16:42 2024
 
 @licence: MIT
 
-    CSV files must contain a header with the names of 
+CSV files must contain a header with the names of 
 the criteria and, respectively, in the rows, ordinal 
-or cardinal numerical information. If in doubt, access
-the example data.csv
+or cardinal numerical information + alternatives column with header. 
+If in doubt, access the example study1.csv
 
 requirements : numpy, pandas, sklearn
    
