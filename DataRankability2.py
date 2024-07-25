@@ -6,10 +6,15 @@ Created on Fri Jun 14 09:16:42 2024
 
 @licence: MIT
 
-CSV files must contain a header with the names of 
-the criteria and, respectively, in the rows, ordinal 
-or cardinal numerical information + alternatives column with header. 
-If in doubt, access the example study1.csv
+   CSV files must contain a header with the names of 
+   the criteria and, respectively, in the rows, ordinal 
+   or cardinal numerical information + alternatives column with header. 
+   If in doubt, access the example study1.csv
+
+    OBS: Each criterion can be a benefit or a cost. However, to specifically 
+        analyze dominance and efficiency, increasing numerical order of the 
+        criterion results in greater dominance, that is, the higher the value 
+        of the criterion the better (benefit maximization).
 
 requirements : numpy, pandas, sklearn
    
