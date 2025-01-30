@@ -7,7 +7,20 @@ Created on Mon Mar 27 16:10:41 2023
 """
 
 import numpy as np
-from numpy.linalg import norm
+
+@staticmethod    
+def normalizationDFtoMin0Max1(df):
+
+    for c in df.keys():
+        max = df[c].max()
+        min = df[c].min()
+        delta = max - min
+        
+        if delta == 0.0: delta = 1.0
+        
+        df[c] = (df[c] - min*np.ones(df.shape[0])) \
+                                /delta              
+    return df
        
 class DataRankable():
     ''' Class for estimating data rankability using the rho method 
@@ -29,7 +42,8 @@ class DataRankable():
                 data[columnname].astype(float)
             except TypeError:
                 print('could not convert string to float!')
-                
+        
+        data = normalizationDFtoMin0Max1(data)
         self.data = data
         self.alt = alt
         self.numberOfAlternatives = self.data.shape[0]
