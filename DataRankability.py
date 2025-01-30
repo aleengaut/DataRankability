@@ -30,6 +30,7 @@ df = df.drop(['alternatives'], axis=1)
 dr_1 = rankability.DataRankable(data = df.copy(), alt = alt.copy())
 dr_1.__rankabilityIndex__()
 dr_1.__sumDominanceVectorAllCriteria__()
+dr_1.__sumDomEffVectorAllCriteria__()
 print('rankability: ', dr_1.rho)
-print('Data:', dr_1.data)
+#print('Data(0_1 reescaled criteria):', dr_1.data)
 
