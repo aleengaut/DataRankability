@@ -18,8 +18,8 @@ requirements : numpy, pandas, sklearn
 import pandas as pd
 import rankability
 
-file=open('study3.csv','r')
-#file=open('data.csv','r')
+#file=open('study1.csv','r')
+file=open('data.csv','r')
 #file=open('dataFromKBS.csv','r')
 
 
@@ -32,5 +32,6 @@ dr_1.__rankabilityIndex__()
 dr_1.__sumDominanceVectorAllCriteria__()
 dr_1.__sumDomEffVectorAllCriteria__()
 print('rankability: ', dr_1.rho)
-#print('Data(0_1 reescaled criteria):', dr_1.data)
+print('Output: ', dr_1.dataOutput)
+print('Data(0_1 reescaled criteria):', dr_1.data)
 
