@@ -66,8 +66,14 @@ class DataRankable():
         for a in range(self.numberOfAlternatives):
             for b in range(self.numberOfAlternatives):
                 test = 0
+                flag1=True # flag dominant alt by at least one criterion.
+                flag2=True # flag first time data[a,c] < data[b,c]
                 for c in range(self.numberOfCriteria):
-                    if data[a,c] > data[b,c]: test=test+1 
+                    if data[a,c] > data[b,c]: test=test+1
+                    if data[a,c] < data[b,c] and flag2: 
+                        flag1=False
+                        flag2=False
+                if flag1 and test>0: test=self.numberOfCriteria
                 test = test // self.numberOfCriteria
                 e[a] = e[a] + test
         
